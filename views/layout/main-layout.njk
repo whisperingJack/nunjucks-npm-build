@@ -2,99 +2,56 @@
 
 <html>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="description" content="{{ meta-description }}" />
-    
-    
-	<meta name="keywords" content="{{ meta-keywords }}" />
-	<meta name="robots" content="index, follow" />
-	<!-- Keyword opportunity -->
-	<title>{{ title-tag }}</title>
-    <!-- SEO -->
-    <link rel="canonical" href="http://www.nook-digital.marketing" />
-	<!-- Favicon -->
-	<link rel="icon" href="favicon.ico"/>
-	
-	<!-- Fonts -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{{ data.meta_description }}" />
+        <meta name="keywords" content="{{ data.meta_keywords }}" />
+        <meta name="robots" content="index, follow" />
 
-	<!-- Icons -->
-    
-	<!-- jQuery -->
-    <script defer src="js/jquery.min.js"></script>
-    
-	<!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/styles.css" media="screen" title="come back to this!" >
-    
-    <link rel="stylesheet" type="text/css" href="css/logo_styles.css/">
-    
-    <link rel="stylesheet" type="text/css" href="css/form.css" />
-    
-    <!-- Captcha -->
-     <script defer  src='https://www.google.com/recaptcha/api.js'></script>
-    
-    
- <!--Structured Data -->  
-    <script type='application/ld+json'> 
-{
-  "@id":"http://www.nook-digital.marketing",
-  "@context": "http://www.schema.org",
-  "@type": "LocalBusiness",
-  "logo":"http://www.nook-digital.marketing/images/Nook-Logo-Square-V3-GREY-100px.jpg",
-  "name": "Nook Digital Marketing",
-  "email": "jamie@nook-digital.marketing",
-  "url": "http://www.nook-digital.marketing/index.php",
-  "openingHoursSpecification": [
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "00:00",
-    "closes": "23:59"
-  }],
-  
-  "sameAs": [
-    "https://www.facebook.com/nookdigitalmarketing/"
-  ],
-  "image": "http://www.nook-digital.marketing/images/Nook Logo Square V3-01.png",
-  "description": "Nook Digital Marketing optimises websites and creates targeted content to connect your website to your customers and generate leads.",
-    "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Perth",
-    "addressRegion": "Western Australia",
-    "postalCode": "6000",
-    "addressCountry": "Australia"
-  },
-    "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "-31.953512",
-    "longitude": "115.857048"
-  },
-  "hasMap": "https://www.google.com.au/maps/place/Perth+WA/@-32.0391738,115.6813683,10z/data=!3m1!4b1!4m5!3m4!1s0x2a32966cdb47733d:0x304f0b535df55d0!8m2!3d-31.9505269!4d115.8604572",
- "telephone": "1300 923 927"
-}
- </script>
-</head>
-    
+        <!-- Keyword opportunity -->
+        <title>{{ data.title_tag }}</title>
+
+        <!-- SEO -->
+        <link rel="canonical" href="{{data.canonical_link}}" />
+
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico"/>
+
+        <!-- Fonts -->
+        {% include '../partials/head/fonts.njk' %}
+
+        <!-- Icons -->
+        {% include '../partials/head/icons.njk' %}
+
+        <!-- jQuery -->
+        <script defer src="js/jquery.min.js"></script>
+
+        <!-- CSS -->
+        {% include '../partials/head/css.njk' %}
+
+        <!-- Captcha -->
+        <script defer  src='https://www.google.com/recaptcha/api.js'></script>
+
+        <!--Structured Data -->  
+        {% include '../partials/head/structured_data.njk' %}
+
+    </head>
+
     <body>
+        
         {% block header %}
         {% endblock %}
+    
         {% block content %}
         {% endblock %}
+        
+        {% include 'partials/body/footer.njk' %}
+        
     </body>
 
-    <script defer type="text/javascript" src="js/score.js"></script>
-    <script defer type="text/javascript" src="php/app.js"></script>
-    <script async type="text/javascript" src="js/scrolltop.js"></script>
-
+        <!--Javascript -->  
+        {% include '../partials/head/javascript.njk' %}
+    
 </html>

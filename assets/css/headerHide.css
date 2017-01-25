@@ -1,0 +1,32 @@
+
+.header, .fixed-form{
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+ 
+    -webkit-transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+    transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+ 
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    
+	width: 100%;
+    
+	position:fixed;/* do not change*/
+	z-index: 10;
+    
+}
+
+ 
+.header_hidden{  
+    -webkit-transform: translateY( -100% );
+    -ms-transform: translateY( -100% );
+    transform: translateY( -100% );
+}
+
+.form_hidden{  
+    -webkit-transform: translateY( 100% );
+    -ms-transform: translateY( 100% );
+    transform: translateY( 100% );
+}
+
+

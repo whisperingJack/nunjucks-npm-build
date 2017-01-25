@@ -1,0 +1,170 @@
+/* PARALLAX STYLES
+--------------------------------------------- */
+/* slide backgrounds additonal styling */
+/*non critical styling*/
+#slide-1 .slide__bg {
+background-image: url('/assets/images/educational-dance-workshops-perth.jpg');
+
+
+}  
+/*non critical styling*/
+#slide-2 .slide__bg, #slide-4 .slide__bg {
+background-color: darkgray;
+    border-bottom: 3px solid #ee792c !important;
+     border-top: 3px solid #ee792c !important;*/
+}
+/*non critical styling*/
+#slide-3 .slide__bg {
+  background-image: url(/assets/images/14344356_1829588987270647_158017859721532894_n.jpg)
+}
+
+/*non critical styling*/
+#slide-6 .slide__bg {
+     border-top: 3px solid #ee792c !important;
+background-color: darkgray;
+}
+
+body {
+  scroll-behavior: smooth;
+}/*smooth scroll between link (firefox only)*/
+
+.slides{overflow: hidden}
+
+.small-header-nav{
+    position: fixed;
+    top;0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}/*fix nav in place for phones*/}
+
+/* slide layout
+--------------------------------------------- */
+#slide-1{padding-top: 25px;  margin-top: -200px; 
+}
+#slide-2, #slide-4 {
+  text-align: center;
+}
+#slide-3, #slide-5{padding-top: 0;
+}
+#slide-6{
+    padding: 10px;padding: 10px;
+   
+    text-align: center;
+}
+
+/*parallax group*/
+.slide {
+	position: relative;/*to background*/	
+}
+
+/* slide background */
+.slide__bg {
+  position: absolute;/*in relation to slide container*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;/*bottom layer*/;
+}
+
+
+ /*foreground*/
+.slides {
+    position: absolute;/*position container in window*/
+	width: 100%;/*fill container*/
+    height: 100%;/*fill container*/
+	perspective: 400px;/*dictates size of slide--bg*/
+	
+    }
+
+    	 /*slide container*/
+.slides {
+	overflow-x: hidden;/*hide scroll bar*/
+	overflow-y: auto;/*hide scroll bar*/
+
+	}
+
+.slides::-webkit-scrollbar { 
+    display: none;/*hide scroll bar*/ 
+}
+
+/* Only apply to larger screens
+--------------------------------------------- */ 
+@media screen and (min-width: 768px) {
+
+  /* parallax */
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    body {
+      transform: translateZ(0px); /* Fix paint issues in Edge && Safari H/W acceleration */
+    }
+	  
+
+.slide, .slide__content {
+      transform-style: preserve-3d;/* maintain perspective effect*/	
+    }
+	  
+.slide__image {
+      transform: translateZ(60px) scale(.7);/*set text distance from page and scale*/
+      transform-origin: 185% 100%;/*position of image on slide*/
+		/*background-color: aqua;*/
+		height:250px;
+		width:250px;
+    }
+
+  .slide__text {
+      transform: translateZ(60px) scale(.7);/*set text distance from page and scale*/
+      transform-origin: 50% 50%;/*position of text on slide*/
+		/*background-color: aqua;	*/
+    }
+
+	  
+.slide__testomonial {
+      transform: translateZ(80px) scale(.7);/*set text distance from page and scale*/
+      transform-origin: 50% 50%;/*position of text on slide*/
+		/*background-color: aqua;	*/
+    }
+	  
+.slide__footer {
+    transform: translateZ(60px) scale(.7);/*set text distance from page and scale*/
+    transform-origin: 50% 50%;/*position of text on slide*/
+	/*background-color: aqua;*/
+	text-align: center;
+    }
+	  
+    .slide:nth-child(2n) .slide__image {
+      transform: translateZ(100px) scale(.6);
+		transform-origin: 115% 65%;}
+
+    .slide:nth-child(2n) .slide__text {
+      transform-origin: 100% 50%;/*position of text on slide*/
+    }
+    .slide:nth-child(2n) .slide__bg {
+      transform: translateZ(59px) scale(.85);/*set background distance from page and scale to match window*/
+    }
+    .slide:nth-child(2n+1):not(:first-child) .slide__bg {
+      top: -15%;/*extend slide__bg to meet next bg to fill gap*/
+    }
+    .slide:nth-child(2n+1):not(:last-child) .slide__bg {
+      bottom: -50%;/*extend slide__bg to meet next bg to fill gap*/
+    }
+    .slide:first-child {
+      padding-top: 4%;/*non critical styling*/
+    }
+    .slide:last-child {
+      padding-bottom: 14%;/*non critical styling*/
+    }
+    .slide:nth-child(2n) {
+      z-index: 1; /* ensure slides overlay correctly */
+    }
+  }
+    
+@media only screen and (min-width: 320px) {    
+    well{border-radius:  0 !important/*override bootstrap class*/;}
+
+}
+    
+    @media only screen and (min-width: 768px) {    
+        #slide-1{padding-top: 40px; margin-top: 0;}
+    
+}

@@ -1,0 +1,164 @@
+/* PLUGIN - READ MORE (HIDDEN/REVEAL)*/
+.read-more-wrap {
+  padding-bottom: 40px; }
+
+.read-more-state {
+  display: none; }
+
+.read-more-target {
+  opacity: .7;
+  -webkit-transition: .25s ease;
+          transition: .25s ease;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out; 
+   }
+   
+}
+
+.hide {
+  color: black; }
+
+/*.read-more-state:checked ~ .read-more-wrap .read-more-target > .hide {color: $main_color} change color when text is expanded*/
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  max-height: 999em;
+  color: black;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px); }
+
+.read-more-state:checked ~ .read-more-wrap {
+  margin-top: 40px; }
+
+.read-more-state:checked ~ .read-more-trigger {
+ background-color: #eef5f6;
+  color: darkgrey;
+    box-shadow: none;
+    display: inline-block;
+    margin-bottom: 0;
+    background-color: none;
+border: 1px solid darkgrey}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Continue Reading';
+  border-bottom: 0px #ee792c solid;
+  padding: 10px;
+  /*Over ride bootstrap well*/
+  /*Over ride bootstrap well*/
+  /*Over ride bootstrap well*/
+  border-radius: 3px !important;
+  /*Over ride bootstrap well*/
+  padding-left: 0; }
+
+.read-more-trigger {
+  cursor: pointer;
+  color: white;
+    box-shadow: 0px 2px 5px #888888;
+    border-radius:3px;
+    padding: 12px 20px;
+    display: inline-block;
+    margin-bottom: 60px;
+    background-color: #6ac8c8;
+}
+
+.read-more-trigger:hover {
+position: relative;
+    box-shadow: none;
+    top:2px;
+    border: 1px solid lightgrey;
+
+}
+/**/
+
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^   MEDIA QUERIES ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+@media only screen and (min-width: 320px) {
+
+ .read-more-trigger:before {
+    font-size: 1em; }
+
+  .read-more-target {
+    font-size: 1em;
+    margin: 0 10px; }
+
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    font-size: 1.2em;
+    padding: 20px 20px 0 20px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 425px) {
+  
+ 
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+
+    margin: 0 30px 0 30px; 
+    }
+    
+    }
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 565px) {
+
+  
+
+    
+    
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    padding-left: 40px;
+    padding-right: 40px; 
+    }
+    
+    }
+    
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+
+  
+.read-more-target {
+    margin: 0 40px 0 40px; 
+    font-size: 1.3em; }
+
+     .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    padding-left: 20px;
+    padding-right: 20px; 
+    }
+    
+     .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    font-size: 1.4em;
+    padding: 20px 20px 0 20px;
+    }
+
+    }
+    
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    font-size: 1.8vw; 
+    }
+
+  .read-more-target {
+    font-size: 1.3vw; 
+    }
+
+    
+    }
+
+    
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    font-size: 1.6vw; }
+
+    
+ }
+
+

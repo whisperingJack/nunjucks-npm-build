@@ -1,21 +1,17 @@
 {% extends 'layout/main-layout.njk' %} 
 
-{% block header %}
+{% block panedl %}
 
     <h1>Test</h1>
 
 {% endblock %}
-
 
 {% block content %}
 <?php include_once("analyticstracking.php") ?>
 <main>
     <p>sploooge</p>
 
-     {% include 'partials/body/content/panel1_text.njk' %}
-
+    {% block panel1 %}{% endblock %}
   
 </main>
 {% endblock %} 
-
-

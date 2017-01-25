@@ -1,0 +1,246 @@
+
+
+form {margin: auto;text-align: center;background-color: black;border-top: 2px solid #ee792c;}
+
+.form-text{font-family: 'Roboto', 'arial';margin: 0px 10px 0 10px;color: white;
+}
+.form-text a{text-decoration: none;color: white;
+}
+
+
+/* PLUGIN - FORM INPUTS ----------------------------------------------------------------------------------*/
+.details > #name {background-image: url('/assets/images/svg/name.svg'); background-size: auto; }
+.details > #phone {background-image: url('/assets/images/svg/phone.svg');background-size: auto;}
+.details > #email {background-image: url('/assets/images/svg/email.svg');background-size: auto;}
+.details > .textbox {background-image: url('/assets/images/svg/address.svg');background-size: auto;}/*change to pencil icon*/
+
+.details > .input {
+	vertical-align: top;
+    padding: 10px 0 10px 30px;
+	text-align: left!important;
+    box-shadow: 0px 3px 5px #888888;
+    height: 18px;
+}
+.details > .textbox {/*to come after .input*/
+	max-height: 18px;
+    resize: none;/*Prevent text area resize*/
+	padding: 10px 0 10px 30px;
+	border-style:inset;
+	border-color: initial;
+	webkit-appearance: textfield; 
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;   
+    border-width: 2px;
+    box-shadow: 0px 3px 5px #888888;
+}
+
+.details > .textbox:focus { 
+	min-height: 80px;
+	background-color: lightblue;
+	padding: 10px 10px 0 30px;
+}
+.details > .input:focus {
+    background-color: lightblue;
+	padding-left: 30px;	
+    background-position: 5px 8px;background-repeat: no-repeat;
+}
+
+
+/*Shared input/textbox styles*/
+.details > .textbox, .details > .input { 
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;background-position: 5px 8px;background-repeat: no-repeat; border-radius:3px;font-size: .9em;font-family: 'arial';display: inline-block}
+
+
+.submit{width: auto;padding: 10px;margin: 20px 0 20px 0;box-shadow: 0px 3px 5px #888888;}
+
+.submit:hover{position: relative;top: 3px; box-shadow: none}
+
+.success {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #468847;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-family: 'arial';
+    font-size: 1.1em;
+    padding: 10px;
+    width: 30%;
+    min-width: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.hidden{display: none}
+
+.error {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px solid rgba(185, 74, 72, 0.3);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+        font-family: 'arial';
+    padding: 10px 0 10px 0;
+    width:30%;
+    margin: auto;
+    min-width: 200px;
+    margin-bottom: 10px;
+}
+
+.loader2 {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #02505E; /* green */
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    animation: spin 1s linear infinite;
+	opacity:0.6;
+	display: block;
+	margin: 2px auto 2px auto;	
+}
+
+@keyframes spin {/*for loader / spinner*/
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*show widgets button*/
+.widget_btn, .widget_btn2  {
+    padding:11px 5px 11px 5px;display: inline-block;
+    width: 58px;
+    margin:0px 2px 2px 2px;
+    border-radius:3px;
+    background-color: lightgrey;
+    color: white;
+    font-family: 'arial';
+    vertical-align: top;
+    box-shadow: 0px 3px 5px #888888;
+}
+.widget_btn:hover , .widget_btn:active {
+    color: white;position: relative;top: 3px;box-shadow:none;
+}
+
+/*Hide checkbox off screen*/
+#widget_checkbox, #widget_checkbox2  {
+	position:absolute;
+	left:-999em;
+}
+/*hidden widgets*/
+.send_widgets, .send_widgets2{
+	vertical-align: top;
+	padding-top: 10px;
+	opacity:0;
+    height: 0;
+	position: relative;
+    margin: auto;
+    text-align: center;
+	border:none;
+}
+
+.g-recaptcha{display: inline-block;position: relative;width:auto;}
+
+/*hidden widgets*/
+.send_widgets2{
+	vertical-align: top;
+	padding-top: 10px;
+	opacity:0;
+	max-height:0;
+	border:none;
+	
+}
+
+
+/*show widgets*/
+input[type=checkbox]:checked+label+div{
+	max-height:999em;
+	opacity:1;
+	height:auto;
+	overflow:hidden;
+	transition:opacity 1s linear, max-height 1s linear;
+   z-index: 20;
+   
+}
+
+input[type=checkbox]:checked+label{
+	display: none;
+	transition:opacity 1s linear, min-height 1s linear;
+}
+
+
+/* /////////// small - Medium  Devices, Phones///320px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///320px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///320px/////////////////////////////// */
+@media only screen and (min-width : 320px) {
+    
+    .details > .textbox {width: 80%;margin-top: 10px;padding-left: 30px;}
+    
+    .details > .input {padding: 10px 0 10px 30px;width: 80%;display: block;margin: auto;margin-top: 10px}
+    	
+    .details > .input:focus {
+	width: 90%;/*For animation*/
+	padding-left: 30px; display: block}
+
+    .details > .textbox:focus {
+	width: 90%; 
+        padding: 10px 10px 0 23px;}
+        
+    .widget_btn {margin:20px 2px 2px}
+  
+    /*Shared input/textbox styles*/
+    .details > .textbox, .details > .input {background-position: 3px 5px;font-size: .8em;}
+    
+}
+
+/* /////////// small - Medium  Devices, Phones///425px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///425px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///425px/////////////////////////////// */
+@media only screen and (min-width : 425px) {
+    
+    .details > .textbox {width: 30%;
+    }
+    .details > .input {padding: 10px 0 10px 30px;width: 16%;display: inline-block;margin: 10px 0 0 0;
+    }
+    .details > .input:focus {
+	width: 21%;/*For animation*/display: inline-block
+    }
+    .details > .textbox:focus {width: 33%;}
+        
+    .widget_btn {margin:11px 2px 2px
+    }    
+}
+
+/* /////////// small - Medium  Devices, Phones///768px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///768px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///768px/////////////////////////////// */
+@media only screen and (min-width : 768px) {
+    
+    .details > .textbox {width: 20%;
+    }
+    .details > .input {width: 12%;
+    }
+    .details > .input:focus {
+	width: 21%;/*For animation*/
+    }
+    .details > .textbox:focus {width: 33%;}
+        
+    #form{position: fixed; bottom: 0;left: 0; width: 100%;background-color: black;display: block;}
+    
+   
+    
+}
+
+
+/* /////////// Large  Devices, Phones///1200px+ /////////////////////////////// */
+/* /////////// Large  Devices, Phones///1200px+ /////////////////////////////// */
+/* /////////// Large  Devices, Phones///1200px+ /////////////////////////////// */
+@media only screen and (min-width :1200px) {
+/*Shared input/textbox styles*/
+.details > .textbox, .details > .input {
+    background-position: 5px 8px;font-size: .9em;
+    }
+}
