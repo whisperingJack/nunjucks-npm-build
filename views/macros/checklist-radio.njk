@@ -1,0 +1,12 @@
+{% for checklist_json.checklist.section.subsection in checklist_json.checklist.section %}
+  <li>
+    <span class="radio_title">{{checklist_json.checklist.section.subsection.radio_title}}</span>
+
+    <label class="radio_label">
+        <input type="radio"  class="radio {{class}}" name="{{checklist_json.checklist.section.subsection.name}}" value="{{checklist_json.checklist.section.subsection.value | escape}}">
+    Yes</label>
+
+    <label class="radio_label"><input type="radio"  class="radio {{checklist_json.checklist.section.subsection.class}}" name="{{checklist_json.checklist.section.subsection.name}}" value="0">
+    No</label>
+</li>  
+{% endfor %}

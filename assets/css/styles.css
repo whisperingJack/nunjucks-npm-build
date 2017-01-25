@@ -1,0 +1,241 @@
+ 
+@font-face {
+    font-family: 'nook';
+    src:  url('/fonts/nook.woff') format('woff');}
+
+ @font-face {
+    font-family: 'typola';
+    src:  url('/fonts/typola.woff') format('woff');}
+
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*GENERAL --------------------------------------------------------------------------------------------------*/
+.bold_text{font-weight: 600;}
+
+
+/*LAYOUT --------------------------------------------------------------------------------------------------*/
+body {background: url('/images/digital-marketing-bg.svg');background-attachment: fixed;background-color: #d1d3d4;}
+
+main {width: 50%; margin: auto;padding: 20px;border: 1px black solid;background-color: #9b9c9d;border-radius: 5px;}
+.services{
+    border: 2px solid #5bcbf5;
+    font-family: 'Helvetica','Arial'; 
+    margin: 0;
+    border-radius: 5px;
+    background: #b7e5fa; /* Old browsers */ /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b7e5fa 0%,#90c0e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b7e5fa 0%,#90c0e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7e5fa', endColorstr='#90c0e5',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0px 3px 5px #888888;
+}
+.services  li {list-style-type:circle}
+
+
+/*BOXES ---------------------------------------------------------------------------------------------------*/
+.site-details{border: 1px dotted #9b9c9d;padding:20px;border-radius: 3px;display: block;}
+
+.content-box{border: 1px solid white;padding:20px;border-radius: 3px;text-align: justify}
+
+.company-mission{text-align: left;font-size: 1.1em; }
+
+.notes_label{display: inline-block;width:  100%;margin: 10px auto 0 auto;text-align: center;border-top: 1px solid darkgrey;padding: 40px 0 0 0;font-weight: 600;}
+
+
+
+/*TEXT STYLING ---------------------------------------------------------------------------------------------*/
+h1 , h2 , h3{text-align: center;width: 100%;font-family: 'typola';
+    margin: 10px auto 10px auto;}
+h4 {text-align: center;}
+
+a {color: #616161;}
+
+li {margin-left: -25px; padding: 0;}
+
+
+details{font-family: typola;}
+
+/*CLASSES*/
+
+.page-speed {text-align: center;margin-bottom: 40px}
+
+.page-speed a{color: #616161}
+
+/* BUTTONS ----------------------------------------------------------------------------------------------*/
+
+.email-button{padding: 6px;border-radius: 3px;border: 1px solid #d1d3d4;box-shadow: 0px 3px 5px #888888;margin-top: 5px;display: inline-block;}
+
+.email-button:hover{box-shadow: none;position: relative;top: 2px;}
+
+/*LISTS -------------------------------------------------------------------------------------------------*/
+ul{
+    list-style-type: none;
+    list-style:none;}
+
+li{padding-top: 40px}
+
+.list-heading{margin-top: 40px;}
+
+/*CONTACT*/
+.email-form{margin: 10px 0;color: #d1d3d4;width: 100%;padding: 40px 0px 10px 0px}
+
+.phone-number{margin-top: 40px;color: #d1d3d4;font-family: 'Arial';text-align: center;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;display: block}
+
+/*BRANDING*/
+.main-logo{margin: 0 auto 15px auto;width: 100%;position: relative;right: 2%;margin-top: 10px}
+
+.price{font-size: 1.2em;color:#d95c20 }
+
+/*Navigation -------------------------------------------------------------------------------------------------*/
+.navigation-box {text-align: justify;width: 100%; width: 60%;margin: auto}
+
+.navigation-box:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+ .navigation li {margin-left: -40px;padding: 0px;}/*Remove Browser Agent Indent*/
+.nav-button a{padding: 10px;display: block; text-decoration: none;color: white;box-shadow: 0px 3px 5px #888888;font-family: 'helvetica','Arial';border-radius: 5px;background-color: darkgrey;}
+
+.nav-button{ display:inline-block;;
+}
+
+.nav-button:hover{position: relative;top: 3px; box-shadow: none}
+
+.copyright{font-family: 'helvetica','Arial';text-align: center;font-size: .8em;}
+
+
+.back_to_top,.back_to_top:hover{
+    color:#455052;display: block;font-size: 1.3em;
+    margin-bottom: 30px;
+    display: inline-block; padding: 10px;box-shadow: 0px 3px 5px #888888;font-family: 'helvetica','Arial';display: inline-block;border-radius: 5px;background-color: darkgrey;text-decoration: none
+}
+
+.back_to_top:hover{position: relative;top:3px;}
+
+.score{text-align: left}
+
+/*CHECKLIST -------------------------------------------------------------------------------------------------*/
+.checklist-section{margin-top: 40px;font-family: 'helvetica','Arial';}
+.checklist-section p{text-align: justify;line-height: 30px}
+.checklist-section h3{padding-top: 60px;margin-bottom: -30px; border-top: 1px solid darkgrey;font-size: 2em;}
+
+
+
+.form-text{font-family: 'helvetica', 'arial';}
+.form-text a{text-decoration: none;color: white;}
+form {margin: auto;text-align: center;}
+
+.text_label{display: block; text-align: left;width: 55%;margin: 20px auto 0 auto;}
+.text_input , .number_input { width: 55%;margin-top: 10px}
+
+.radio_title {display: block;padding: 20px 0 20px 0;font-weight: 600; border-top: 1px solid darkgrey}
+.radio_label{
+    display: inline-block; 
+    padding: 10px 0 10px 16%;
+    text-align: justify;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 3px 5px #888888;
+    font-family: 'helvetica','Arial';
+    border-radius: 5px;
+    background-color: darkgrey;
+    width: 45%;
+    cursor: pointer;}
+.radio_label:hover{position: relative;top: 3px;}
+
+
+.notes {margin: 20px auto 20px auto; display: block;height: 100px;}
+.submit_button{margin: 40px;padding: 10px 20px;}
+
+/* /////////// small - Medium  Devices, Phones///320px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///320px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///320px/////////////////////////////// */
+@media only screen and (min-width : 320px) {  
+     body {font-size: .9em;}
+    
+     main {width: 92%;padding: 10px;}
+    .navigation-box{ width: 100%;}
+    
+    .nav-button{ width: 50%;text-align: center;margin-bottom: 10px;margin-top: 20px}
+    
+    .text_input , .number_input, .text_label { width: 75%;}
+    
+    .notes {width: 100%;}
+    
+    .services{padding: 15px;}
+    .checklist-section h3{font-size: 1.6em;}
+   
+    .checklist-section p{margin: 40px 0px}
+}
+
+/* /////////// small - Medium  Devices, Phones///450px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///450px/////////////////////////////// */
+/* /////////// Small - Medium  Devices, Phones///450px/////////////////////////////// */
+@media only screen and (min-width : 500px) {  
+    .navigation-box{ width: 90%;}
+    .nav-button{ width: auto;margin-bottom: 10px;margin-top: 20px}
+    .text_input , .number_input, .text_label { width: 65%;}
+    .notes {width: 80%;}
+    .checklist-section p{margin: 30px 0px}
+    
+
+}
+@media only screen and (min-width : 600px) {  
+    .navigation-box{ width: 80%;}
+    .nav-button{ width: auto;margin-bottom: 10px;margin-top: 20px}
+    .checklist-section h3{font-size: 2em;}
+}
+
+/* /////////// Medium  Devices, Phones///768px/////////////////////////////// */
+/* /////////// Medium  Devices, Phones///768px/////////////////////////////// */
+/* /////////// Medium  Devices, Phones///768px/////////////////////////////// */
+@media only screen and (min-width : 768px) {
+    
+    body {font-size: 1em;}
+    
+     main {width: 70%;}
+    
+     .navigation-box{ width: 85%;}
+    
+    .text_input , .number_input, .text_label { width: 55%;}
+    
+    .notes {width: 70%;}
+    
+    .checklist-section p{margin: 30px 0px}
+    
+      .services{padding: 40px;}
+    
+}
+    
+    
+/* /////////// Large  Devices, Phones///768px+ /////////////////////////////// */
+/* /////////// Large  Devices, Phones///768px+ /////////////////////////////// */
+/* /////////// Large  Devices, Phones///768px+ /////////////////////////////// */
+@media only screen and (min-width :1200px) {
+     body {font-size: 1.1em;}
+     main {width: 50%;}
+    .notes {width: 60%;}
+    .navigation-box{ width: 70%;}
+    .checklist-section p{margin: 40px 0px}
+}
+
